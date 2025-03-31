@@ -1,0 +1,241 @@
+/* General Styles */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #0D0F12 0%, #11151A 100%);
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 4px solid #3d62cf;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3d62cf;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: black;
+}
+
+.highlight {
+    color: #688CFD;
+}
+
+
+/* =======================
+   Header & Navigation
+   ======================= */
+.banner {
+    background: black;
+    padding: 35px 0;
+    opacity: 0.8;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #688CFD;
+}
+
+.login-button a {
+    background-color: transparent;
+    border: 4px solid #3d62cf;
+    padding: 15px 45px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.login-button:hover a {
+    background-color: #3d62cf;
+}
+
+/* =======================
+   Hero Section
+   ======================= */
+   .hero {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: url('../images/bull.png') no-repeat center center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.hero.container p{
+    margin: 0;
+    padding: 0;
+}
+
+.hero-buttons {
+    margin-top: 7rem;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+}
+
+/* =======================
+   Industry Rank Section
+   ======================= */
+.industry-rank {
+    text-align: center;
+    background: #222;
+    padding: 40px 20px;
+}
+
+/* =======================
+   ROI Calculator Section
+   ======================= */
+.roi-calculator {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* =======================
+   Features Section
+   ======================= */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* =======================
+   Footer
+   ======================= */
+footer {
+    background: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin: 0 10px;
+}
