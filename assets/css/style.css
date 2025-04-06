@@ -1,3 +1,12 @@
+:root {
+    --black-color: rgb(0, 0, 0);
+    --white-color: rgb(255, 255, 255);
+    --blue-button: rgb(61, 98, 207);
+    --text-hover-blue: rgb(104, 140, 253);
+    --roi-container-blue: rgb(10, 21, 35);
+
+}
+
 /* General Styles */
    * {
     margin: 0;
@@ -8,7 +17,7 @@
 
 body {
     background: linear-gradient(to bottom right, #0D0F12 0%, #11151A 100%);
-    color: white;
+    color: var(--white-color);
     line-height: 1.6;
 }
 
@@ -52,27 +61,27 @@ p {
 
 .btn-primary {
     background-color: transparent;
-    border: 4px solid #3d62cf;
-    color: white;
+    border: 4px solid var(--blue-button);
+    color: var(--white-color);
 }
 
 .btn-primary:hover {
-    background-color: #3d62cf;
+    background-color: var(--blue-button);
 }
 
 .btn-secondary {
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 3px solid var(--white-color);
+    color: var(--white-color);
 }
 
 .btn-secondary:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
 
 .highlight {
-    color: #688CFD;
+    color: var(--text-hover-blue);
 }
 
 
@@ -80,7 +89,7 @@ p {
    Header & Navigation
    ======================= */
 .banner {
-    background: black;
+    background: var(--black-color);
     padding: 35px 0;
     opacity: 0.8;
 }
@@ -109,31 +118,33 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
 }
 
 nav ul li a:hover {
-    color: #688CFD;
+    color: var(--text-hover-blue);
 }
 
 .login-button a {
     background-color: transparent;
-    border: 4px solid #3d62cf;
+    border: 4px solid var(--blue-button);
     padding: 15px 45px;
     text-decoration: none;
-    color: white;
+    color: var(--white-color);
     font-weight: bold;
     font-size: 20px;
     border-radius: 5px;
 }
 
 .login-button:hover a {
-    background-color: #3d62cf;
+    background-color: var(--blue-button);
 }
 
+
+/*Index page*/
 /* =======================
    Hero Section
    ======================= */
@@ -149,7 +160,7 @@ nav ul li a:hover {
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
-    color: white;
+    color: var(--white-color);
 }
 
 .hero::before {
@@ -180,31 +191,160 @@ nav ul li a:hover {
    Industry Rank Section
    ======================= */
 .industry-rank {
+    height: 90vh;
     text-align: center;
-    background: #222;
     padding: 40px 20px;
+}
+
+.rank-content {
+    display: flex;
+    align-items: center;
+    gap: 20rem;
 }
 
 /* =======================
    ROI Calculator Section
    ======================= */
 .roi-calculator {
-    text-align: center;
-    padding: 50px 20px;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(13, 14, 16), rgb(10, 21, 35));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
-form {
+.roi-calculator .container {
+    width: 90%;
+    max-width: 750px;
+    min-height: 500px;
+    background: var(--roi-container-blue);
+    border: 4px solid var(--blue-button);
+    border-radius: 15px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-form input {
+.roi-calculator h2 {
+    max-width: 800px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.roi-calculator form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.roi-calculator label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: white;
+    text-align: left;
+}
+
+.roi-calculator input {
     width: 80%;
-    max-width: 400px;
-    padding: 10px;
-    margin: 10px 0;
+    max-width: 350px;
+    padding: 12px 15px;
+    margin: 5px 0 20px 0;
     font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid var(--roi-container-blue);
+    border-radius: 10px;
+    color: var(--white-color);
+    text-align: center;
+    appearance: textfield;
+}
+
+.roi-calculator input:focus {
+    outline: none;
+    border-color: var(--blue-button);
+}
+
+/* Remove number input spinners */
+.roi-calculator input::-webkit-outer-spin-button,
+.roi-calculator input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+}
+
+.input-icon .icon {
+    margin-right: 10px;
+}
+
+.result-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.result-section input {
+    width: 80%;
+    max-width: 350px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid var(--roi-container-blue);
+    border-radius: 10px;
+    color: var(--white-color);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.calculate-btn {
+    width: 50%;
+    margin: 30px 0;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* RESULT SECTION */
+.result-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.15);
+}
+
+.result-section label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+}
+
+#future-money {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--blue-button);
+    border-radius: 10px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    color: var(--white-color);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
 }
 
 /* =======================
@@ -230,7 +370,7 @@ form input {
    Footer
    ======================= */
 footer {
-    background: black;
+    background: var(--black-color);
     padding: 20px 0;
     text-align: center;
 }
