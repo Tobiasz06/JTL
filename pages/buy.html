@@ -34,8 +34,61 @@
     </div>
 
     <!-- Middle section -->
-
-
+    <section class="checkout-section">
+        <div class="checkout-container">
+          <h2 class="checkout-title">CHECKOUT</h2>
+      
+          <div class="checkout-box">
+            <div class="checkout-tabs">
+                <span id="tab-login" class="active-tab">
+                  <i class="fa fa-lock tab-icon"></i> Login
+                </span>
+                <span id="tab-signup">
+                  <i class="fa fa-user-plus tab-icon"></i> Sign Up
+                </span>
+            </div>
+              
+      
+            <!-- Login Form -->
+            <form id="form-login" class="checkout-form">
+              <input type="email" id="login-email" placeholder="Email" required />
+              <input type="password" id="login-password" placeholder="Password" required />
+              <label class="remember-box">
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </label>
+              <button type="button" id="login-btn" class="checkout-btn">Login</button>
+              <p class="signup-text">
+                No account yet?
+                <a href="#" id="switch-to-signup">
+                  <img src="../assets/images/signup.png" alt="Sign up icon" style="width: 16px; vertical-align: middle; margin-right: 4px;">
+                  Sign up
+                </a>
+              </p>
+            </form>
+      
+            <!-- Signup Form -->
+            <form id="form-signup" class="checkout-form"> <!-- no inline style here -->
+                <input type="text" id="signup-name" placeholder="First name" required />
+                <input type="email" id="signup-email" placeholder="Email" required />
+                <input type="password" id="signup-password" placeholder="Password" required />
+                <input type="password" id="signup-confirm" placeholder="Confirm Password" required />
+              
+                <label class="remember-box">
+                  <input type="checkbox" id="terms" required />
+                  <span>I agree to the <a href="#">terms and conditions</a></span>
+                </label>
+              
+                <button type="button" id="signup-btn" class="checkout-btn">Sign Up</button>
+              
+                <p class="signup-text">
+                  Already have an account?
+                  <a href="#" id="switch-to-login">Login</a>
+                </p>
+              </form>
+          </div>
+        </div>
+    </section>
 
     <!-- Footer section -->
     <footer>
@@ -48,9 +101,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/account.js"></script>
-    <script src="../js/firebase-config.js"></script>
-    <script src="../js/login.js"></script>
-    <script src="../js/signup.js"></script>    
+    <script src="../js/firebase-config.js" type="module"></script>
+    <script src="../js/buy.js"></script>
 </body>
 </html>
