@@ -36,30 +36,72 @@
     <!-- Middle section -->
     <section class="checkout-section">
         <div class="checkout-container">
-          <h2 class="checkout-title">LOGIN</h2>
-      
-          <div class="checkout-box">
-            <div class="checkout-tabs">
-              <span class="active-tab"><i class="tab-icon">1</i> Login</span>
+            <h2 class="checkout-title">LOGIN</h2>
+        
+            <div class="checkout-box">
+                <!-- Tab Switcher -->
+                <div class="checkout-tabs">
+                    <span id="tab-login" class="active-tab">
+                      <span class="tab-icon"></span> Login
+                    </span>
+                    <span id="tab-signup">
+                      <span class="tab-icon"></span> Sign Up
+                    </span>
+                </div>
+        
+                <!-- Login Form -->
+                <form id="form-login" class="checkout-form">
+                <input type="email" id="login-email" placeholder="Email" required />
+        
+                <div class="password-wrapper">
+                    <input type="password" id="login-password" placeholder="Password" required />
+                    <i class="fa fa-eye toggle-password" data-target="login-password"></i>
+                </div>
+        
+                <label class="remember-box">
+                    <input type="checkbox" />
+                    <span>Remember me</span>
+                </label>
+        
+                <button type="button" id="login-btn" class="checkout-btn">Login</button>
+        
+                <p class="signup-text">
+                    No account yet?
+                    <a href="#" id="switch-to-signup">
+                    <img src="../assets/images/signup.png" alt="Sign up icon" style="width: 16px; vertical-align: middle; margin-right: 4px;">
+                    Sign up
+                    </a>
+                </p>
+                </form>
+        
+                <!-- Signup Form -->
+                <form id="form-signup" class="checkout-form">
+                <input type="text" id="signup-name" placeholder="First name" required />
+                <input type="email" id="signup-email" placeholder="Email" required />
+        
+                <div class="password-wrapper">
+                    <input type="password" id="signup-password" placeholder="Password" required />
+                    <i class="fa fa-eye toggle-password" data-target="signup-password"></i>
+                </div>
+        
+                <div class="password-wrapper">
+                    <input type="password" id="signup-confirm" placeholder="Confirm Password" required />
+                    <i class="fa fa-eye toggle-password" data-target="signup-confirm"></i>
+                </div>
+        
+                <label class="remember-box">
+                    <input type="checkbox" id="terms" required />
+                    <span>I agree to the <a href="#">terms and conditions</a></span>
+                </label>
+        
+                <button type="button" id="signup-btn" class="checkout-btn">Sign Up</button>
+        
+                <p class="signup-text">
+                    Already have an account?
+                    <a href="#" id="switch-to-login">Login</a>
+                </p>
+                </form>
             </div>
-      
-            <form class="checkout-form">
-              <input type="email" placeholder="Email" required />
-              <input type="password" placeholder="Password" required />
-      
-              <label class="remember-box">
-                <input type="checkbox" />
-                <span>Remember me</span>
-              </label>
-      
-              <button type="submit" class="checkout-btn">Login</button>
-      
-              <p class="signup-text">
-                No account yet?
-                <a href="signup.html"><i>+</i> Sign up</a>
-              </p>
-            </form>
-          </div>
         </div>
     </section>
 
@@ -70,7 +112,7 @@
             <img src="../assets/images/logo.png" alt="Logo">
             <p>Copyright &copy; 2025 JTL. All rights reserved.</p>
             <div class="social-icons">
-                <a href="#"><img src="../assets/images/discord.png" alt="Discord"></a>
+                <a href="#"><img src="../assets/images/tiktok.png" alt="Discord"></a>
                 <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
             </div>
         </div>
