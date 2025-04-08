@@ -1,37 +1,61 @@
 // buy.js
-document.addEventListener("DOMContentLoaded", () => {
-  const tabLogin = document.getElementById("tab-login");
-  const tabSignup = document.getElementById("tab-signup");
-  const formLogin = document.getElementById("form-login");
-  const formSignup = document.getElementById("form-signup");
-  const switchToSignup = document.getElementById("switch-to-signup");
-  const switchToLogin = document.getElementById("switch-to-login");
 
-  const showLogin = () => {
-    formLogin.classList.add("active");
-    formSignup.classList.remove("active");
-    tabLogin.classList.add("active-tab");
-    tabSignup.classList.remove("active-tab");
-  };
+// Import Firebase functions from your config file
+import { auth, db } from './firebase-config.js';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import {
+  doc,
+  setDoc
+} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
-  const showSignup = () => {
-    formSignup.classList.add("active");
-    formLogin.classList.remove("active");
-    tabSignup.classList.add("active-tab");
-    tabLogin.classList.remove("active-tab");
-  };
+// --- SIGNUP --- //
+document.getElementById("signup-btn")?.addEventListener("click", async () => {
+  const name = document.getElementById("signup-name").value.trim();
+  const email = document.getElementById("signup-email").value.trim();
+  const password = document.getElementById("signup-password").value;
 
-  tabLogin.addEventListener("click", showLogin);
-  tabSignup.addEventListener("click", showSignup);
-  switchToSignup?.addEventListener("click", (e) => {
-    e.preventDefault();
-    showSignup();
-  });
-  switchToLogin?.addEventListener("click", (e) => {
-    e.preventDefault();
-    showLogin();
-  });
+  if (!name || !email || !password) {
+    alert("Please fill in all fields.");
+    return;
+  }
 
-  // Initial state
-  showLogin();
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    // Save user data in Firestore
+    await setDoc(doc(db, "users", user.uid), {
+      name,
+      email,
+      createdAt: new Date().toISOString()
+    });
+
+    // Redirect to checkout.html after signup
+    window.location.href = "checkout.html";
+  } catch (error) {
+    alert(`Signup error: ${error.message}`);
+  }
+});
+
+// --- LOGIN --- //
+document.getElementById("login-btn")?.addEventListener("click", async () => {
+  const email = document.getElementById("login-email").value.trim();
+  const password = document.getElementById("login-password").value;
+
+  if (!email || !password) {
+    alert("Please enter both email and password.");
+    return;
+  }
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+
+    // Redirect to checkout.html after login
+    window.location.href = "checkout.html";
+  } catch (error) {
+    alert(`Login error: ${error.message}`);
+  }
 });
