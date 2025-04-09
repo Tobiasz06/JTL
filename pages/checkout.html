@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Checkout</title>
+</head>
+<body>
+  <!-- Top bar section -->
+  <div class="banner">
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="buy.html">BUY NOW</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </nav>
+
+        <div class="login-button">
+          <a href="login.html">LOGIN</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Middle section -->
+  <section class="checkout-section">
+    <div class="checkout-container">
+      <h2 class="checkout-title">CHECKOUT</h2>
+
+      <div class="checkout-box">
+        <!-- Step Indicator -->
+        <div class="checkout-steps">
+          <span class="step">
+            <span class="step-icon">1</span> Login
+          </span>
+          <span class="step active-step">
+            <span class="step-icon">2</span> Payment
+          </span>
+        </div>
+
+        <!-- monthly cost prompt -->
+        <div class="price-row">
+            <span class="price-label">Price per month: </span>
+            <span class="price-amount">£45</span>
+        </div>
+
+        <!-- Payment Button -->
+        <button id="pay-btn" class="checkout-btn">
+          Pay with stripe
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="container">
+      <img src="../assets/images/logo.png" alt="Logo" />
+      <p>Copyright &copy; 2025 JTL. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="../assets/images/tiktok.png" alt="TikTok" /></a>
+        <a href="#"><img src="../assets/images/instagram.png" alt="Instagram" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/firebase-config.js"></script>
+  <script type="module" src="../js/checkout.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>

@@ -639,6 +639,10 @@ nav ul li a:hover {
     color: #ccc;
     margin-bottom: 2rem;
 }
+
+.remember-box a {
+    color: var(--text-hover-blue);
+}
   
 /* Button */
 .checkout-btn {
@@ -663,6 +667,139 @@ nav ul li a:hover {
     color: #09f;
     text-decoration: none;
     margin-left: 0.30rem;
+}
+
+/*Checkout page */
+.checkout-info {
+    font-size: 17px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: var(--blue-button);
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--text-hover-blue);
+    padding: 15px 0.1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+}
+.price-label {
+    font-weight: 600;
+}
+  
+.price-amount {
+    font-weight: 500;
+}
+
+.checkout-btn {
+    border: 2px solid var(--roi-container-blue);
+}
+
+/* contact us page */
+.contact-us {
+    background-color: #0d0f1a;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 2rem;
+    color: #1e90ff;
+    margin-bottom: 5rem;
+    letter-spacing: 1px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 1rem;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: #1a1d2e;
+    padding: 3rem 2.4rem;
+    border-radius: 1rem;
+    width: 384px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    border: 3px solid var(--blue-button);
+    transform: scale(1.02);
+}
+
+.contact-card:not(.middle) {
+    height: 350px;
+}
+
+.contact-card.middle {
+    height: 250px;
+}
+
+.contact-card h3 {
+    color: #1e90ff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.contact-card .btn-primary {
+    margin-top: auto;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+    color: #d1d5db;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bold-question {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.contact-card .btn-primary {
+    background-color: inherit;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.8rem;
+    border: 1px solid var(--blue-button);
+    border-radius: 15px;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+/* Social icons */
+.social-icons {
+    margin-top: 2rem;
+}
+
+.social-icons a img {
+    width: 32px;
+    margin: 0 10px;
 }
 
 
