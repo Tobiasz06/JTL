@@ -125,3 +125,23 @@ document.addEventListener("DOMContentLoaded", () => {
   showLogin();
 });
 
+// Slide animations
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 500, 
+    once: true,
+  });
+});
+
+// For snap pages to fix footer
+const snapContainer = document.querySelector('.snap-container');
+if (snapContainer) {
+    snapContainer.addEventListener('scroll', function() {
+        const scrollBottom = this.scrollHeight - this.scrollTop - this.clientHeight;
+        if (scrollBottom < 1) { // At bottom
+            this.classList.add('at-bottom');
+        } else {
+            this.classList.remove('at-bottom');
+        }
+    });
+}

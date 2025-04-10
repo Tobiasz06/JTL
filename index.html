@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- AOS Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&family=Inter&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Home</title>
 </head>
@@ -32,230 +41,203 @@
     </div>
 
     <!-- Middle section -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
+    <div class="snap-wrapper">
+        <main class="snap-container">
+
+            <!-- Hero Section -->
+            <section class="hero snap-section" data-aos="fade-up">
+                <div class="container">
+                    <h1>
+                        The all in one <span class="highlight">Forex Auto Copier</span>
+                        that grows <br>your money while you sleep
+                    </h1>
+                    <p class="hero-subtext">
+                        A consistent forex copier averaging 15 – 20% monthly returns — all for just <strong>$45/month</strong>.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="pages/buy.html" class="btn-primary">BUY NOW</a>
+                        <a href="#industry-rank" class="btn-secondary">LEARN MORE</a>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Info section -->
+            <section id="industry-rank" class="industry-rank snap-section">
+                <div class="container">
+                    <div class="rank-content">
+                        <div class="rank-image">
+                            <img src="assets/images/forexlaptop.png" alt="Number 1 Rank">
+                        </div>
+                        <div class="rank-text">
+                            <h2><span class="highlight">Number 1</span> in the forex industry</h2>
+                            <p>Auto copier that's proven to work.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- ROI Calculator section -->
+            <section class="roi-calculator snap-section">
+                <h2><span class="highlight">Calculate your ROI</span></h2>
+                <div class="container">
+                    <form>
+                        <div class="input-wrapper">
+                            <label for="initial-investment">Initial investment:</label>
+                            <div class="input-icon">
+                                <img src="assets/images/dollar.png" alt="$">
+                                <input type="text" id="initial-investment" placeholder="$1000">
+                            </div>
+                        </div>
+        
+                        <div class="input-wrapper">
+                            <label for="additional-investment">Monthly add-on:</label>
+                            <div class="input-icon">
+                                <img src="assets/images/dollar.png" alt="$">
+                                <input type="text" id="additional-investment" placeholder="e.g. 200">
+                            </div>
+                        </div>
+        
+                        <div class="input-wrapper">
+                            <label for="monthly-interest">Monthly interest rate:</label>
+                            <div class="input-icon">
+                                <img src="assets/images/percentage.png" alt="%">
+                                <input type="text" id="monthly-interest" placeholder="e.g. 1 for 1%">
+                            </div>
+                        </div>
+        
+                        <div class="input-wrapper">
+                            <label for="months">Months:</label>
+                            <div class="input-icon">
+                                <img src="assets/images/agenda.png" alt="calendar">
+                                <input type="text" id="months" placeholder="12">
+                            </div>
+                        </div>
+        
+                        <button type="button" class="btn-primary calculate-btn">CALCULATE</button>
+                    </form>
+                </div>
+                <div class="result-section">
+                    <label for="future-money">Future investment value:</label>
+                    <input type="text" id="future-money" placeholder="5000" readonly>
+                </div>
+            </section>
+        
+            <!-- Features Section -->
+            <section class="features radial-overlay snap-section">
+                <div class="container">
+                    <h2>FOREX AUTO COPIER <span class="highlight">MAIN FUNCTIONS</span></h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <img src="assets/images/discord.png" alt="Discord">
+                            <div class="feature-content">
+                                <h3>DISCORD</h3>
+                                <p>Discord access to a premium community</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <img src="assets/images/bot.png" alt="Automated Bot">
+                            <div class="feature-content">
+                                <h3>AUTOMATED BOT</h3>
+                                <p>Automated forex trading bot</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <img src="assets/images/support.png" alt="Support">
+                            <div class="feature-content">
+                                <h3>SUPPORT</h3>
+                                <p>24/7 Support when needed</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <img src="assets/images/telegram.png" alt="Telegram">
+                            <div class="feature-content">
+                                <h3>TELEGRAM</h3>
+                                <p>Telegram access to a premium community</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- FAQ section -->
+            <section class="faq snap-section">
+                <div class="container">
+                    <h2>Frequently asked questions</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Random question
+                            <span class="arrow">&#9650;</span>
+                        </button>
+                        <div class="faq-answer">
+                            Random answer
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Random question
+                            <span class="arrow">&#9650;</span>
+                        </button>
+                        <div class="faq-answer">
+                            Random answer
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Random question
+                            <span class="arrow">&#9650;</span>
+                        </button>
+                        <div class="faq-answer">
+                            Random answer
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Contact us section -->
+            <section class="contact-us snap-section" id="last-section">
+                <div class="container">
+                    <h2>CONTACT US</h2>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <h3>DISCORD SUPPORT</h3>
+                            <p><span class="bold-question">Have any doubts or<br> unanswered questions?</span></p>
+                            <p>Join our free discord section where we can provide support.</p>
+                            <a href="#" class="btn-primary">JOIN DISCORD</a>
+                        </div>
+        
+                        <div class="contact-card middle">
+                            <h3>SOCIAL MEDIA</h3>
+                            <p>Follow us on our social media for updates and news</p>
+                            <div class="social-icons">
+                                <a href="#"><img src="../assets/images/tiktok.png" alt="TikTok"></a>
+                                <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
+                            </div>
+                        </div>
+        
+                        <div class="contact-card">
+                            <h3>BUSINESS RELATED</h3>
+                            <p><span class="bold-question">Have a partnership proposal or business inquiry?</span></p>
+                            <p>Feel free to reach out and we'll get back to you as soon as possible.</p>
+                            <a href="mailto:JTL@gmail.com" class="btn-primary">JTL@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>        
+        </main>
+        <!-- Footer section -->
+        <footer>
             <div class="container">
-                <h1>
-                    THE ALL IN ONE <span class="highlight">FOREX AUTO COPIER</span> THAT WILL MAKE <br> YOU THOUSANDS OF DOLLARS <span class="highlight">WHILE YOU SLEEP</span>
-                </h1>
-                <p>The only consistent forex copier with a monthly<br> 15-20% gain of capital for <strong>just $45</strong></p>
-                <div class="hero-buttons">
-                    <a href="pages/buy.html" class="btn-primary">BUY NOW</a>
-                    <a href="#industry-rank" class="btn-secondary">LEARN MORE</a>
+                <p>Copyright &copy; 2025 JTL. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="assets/images/discord.png" alt="Discord"></a>
+                    <a href="#"><img src="assets/images/instagram.png" alt="Instagram"></a>
                 </div>
             </div>
-        </section>
-    
-        <!-- Info section -->
-        <section id="industry-rank" class="industry-rank">
-            <div class="container">
-                <div class="rank-content">
-                    <div class="rank-image">
-                        <img src="assets/images/forexlaptop.png" alt="Number 1 Rank">
-                    </div>
-                    <div class="rank-text">
-                        <h2><span class="highlight">Number 1</span> in the forex industry</h2>
-                        <p>Auto copier that's proven to work.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- ROI Calculator section -->
-        <section class="roi-calculator ">
-            <h2><span class="highlight">Calculate your ROI</span></h2>
-            <div class="container">
-                <form>
-                    <div class="input-wrapper">
-                        <label for="initial-investment">Initial investment:</label>
-                        <div class="input-icon">
-                            <img src="assets/images/dollar.png" alt="$">
-                            <input type="text" id="initial-investment" placeholder="$1000">
-                        </div>
-                    </div>
-
-                    <div class="input-wrapper">
-                        <label for="additional-investment">Monthly add-on:</label>
-                        <div class="input-icon">
-                            <img src="assets/images/dollar.png" alt="$">
-                            <input type="text" id="additional-investment" placeholder="e.g. 200">
-                        </div>
-                    </div>
-                
-                    <div class="input-wrapper">
-                        <label for="monthly-interest">Monthly interest rate:</label>
-                        <div class="input-icon">
-                            <img src="assets/images/percentage.png" alt="%">
-                            <input type="text" id="monthly-interest" placeholder="e.g. 1 for 1%">
-                        </div>
-                    </div>
-                
-                    <div class="input-wrapper">
-                        <label for="months">Months:</label>
-                        <div class="input-icon">
-                            <img src="assets/images/agenda.png" alt="calendar">
-                            <input type="text" id="months" placeholder="12">
-                        </div>
-                    </div>
-                
-                    <button type="button" class="btn-primary calculate-btn">CALCULATE</button>
-                </form>
-            </div>
-            <div class="result-section">
-                <label for="future-money">Future investment value:</label>
-                <input type="text" id="future-money" placeholder="5000" readonly>
-            </div>
-        </section>
-
-
-    
-        <!-- Features Section -->
-        <section class="features radial-overlay">
-            <div class="container">
-                <h2>FOREX AUTO COPIER <span class="highlight">MAIN FUNCTIONS</span></h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <img src="assets/images/discord.png" alt="Discord">
-                        <div class="feature-content">
-                            <h3>DISCORD</h3>
-                            <p>Discord access to a premium community</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <img src="assets/images/bot.png" alt="Automated Bot">
-                        <div class="feature-content">
-                            <h3>AUTOMATED BOT</h3>
-                            <p>Automated forex trading bot</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <img src="assets/images/support.png" alt="Support">
-                        <div class="feature-content">
-                            <h3>SUPPORT</h3>
-                            <p>24/7 Support when needed</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <img src="assets/images/telegram.png" alt="Telegram">
-                        <div class="feature-content">
-                            <h3>TELEGRAM</h3>
-                            <p>Telegram access to a premium community</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ section -->
-        <section class="faq">
-            <div class="container">
-              <h2>Frequently asked questions</h2>
-              <div class="faq-item">
-                <button class="faq-question">
-                  Random question
-                  <span class="arrow">&#9650;</span>
-                </button>
-                <div class="faq-answer">
-                  Random answer
-                </div>
-              </div>
-          
-              <div class="faq-item">
-                <button class="faq-question">
-                    Random question
-                  <span class="arrow">&#9650;</span>
-                </button>
-                <div class="faq-answer">
-                    Random answer
-                </div>
-              </div>
-          
-              <div class="faq-item">
-                <button class="faq-question">
-                    Random question
-                  <span class="arrow">&#9650;</span>
-                </button>
-                <div class="faq-answer">
-                    Random answer
-                </div>
-              </div>
-    
-              <div class="faq-item">
-                <button class="faq-question">
-                  Random question
-                  <span class="arrow">&#9650;</span>
-                </button>
-                <div class="faq-answer">
-                  Random answer
-                </div>
-              </div>
-    
-              <div class="faq-item">
-                <button class="faq-question">
-                  Random question
-                  <span class="arrow">&#9650;</span>
-                </button>
-                <div class="faq-answer">
-                  Random answer
-                </div>
-              </div>
-    
-              <div class="faq-item">
-                <button class="faq-question">
-                  Random question
-                  <span class="arrow">&#9650;</span>
-                </button>
-                <div class="faq-answer">
-                  Random answer
-                </div>
-              </div>
-            </div>
-        </section>
-
-        <!-- Contact us section -->
-        <section class="contact-us">
-            <div class="container">
-                <h2>CONTACT US</h2>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>DISCORD SUPPORT</h3>
-                        <p><span class="bold-question">Have any doubts or<br> unanswered questions?</span></p>
-                        <p>Join our free discord section where we can provide support.</p>
-                        <a href="#" class="btn-primary">JOIN DISCORD</a>
-                    </div>
-
-                    <div class="contact-card middle">
-                        <h3>SOCIAL MEDIA</h3>
-                        <p>Follow us on our social media for updates and news</p>
-                        <div class="social-icons">
-                            <a href="#"><img src="../assets/images/tiktok.png" alt="TikTok"></a>
-                            <a href="#"><img src="../assets/images/instagram.png" alt="Instagram"></a>
-                        </div>
-                    </div>
-
-                    <div class="contact-card">
-                        <h3>BUSINESS RELATED</h3>
-                        <p><span class="bold-question">Have a partnership proposal or business inquiry?</span></p>
-                        <p>Feel free to reach out and we'll get back to you as soon as possible.</p>
-                        <a href="mailto:JTL@gmail.com" class="btn-primary">JTL@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-      
-
-    <!-- Footer section -->
-    <footer>
-        <div class="container">
-            <p>Copyright &copy; 2025 JTL. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><img src="assets/images/discord.png" alt="Discord"></a>
-                <a href="#"><img src="assets/images/instagram.png" alt="Instagram"></a>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </body>
