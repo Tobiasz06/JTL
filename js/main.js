@@ -92,12 +92,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const formSignup = document.getElementById("form-signup");
   const switchToSignup = document.getElementById("switch-to-signup");
   const switchToLogin = document.getElementById("switch-to-login");
+  const formTitle = document.querySelector(".checkout-title"); // Title element
 
   const showLogin = () => {
     formLogin.classList.add("active");
     formSignup.classList.remove("active");
     tabLogin.classList.add("active-tab");
     tabSignup.classList.remove("active-tab");
+    if (formTitle) formTitle.textContent = "LOGIN";
   };
 
   const showSignup = () => {
@@ -105,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formLogin.classList.remove("active");
     tabSignup.classList.add("active-tab");
     tabLogin.classList.remove("active-tab");
+    if (formTitle) formTitle.textContent = "SIGN UP";
   };
 
   tabLogin?.addEventListener("click", showLogin);
@@ -121,3 +124,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set default state
   showLogin();
 });
+
