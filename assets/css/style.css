@@ -429,7 +429,6 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to right, rgb(13, 17, 24), rgb(10, 21, 35), rgb(13, 17, 24));
     padding: 6rem 2rem;
 }
   
@@ -487,9 +486,8 @@ nav ul li a:hover {
 /* ========================
    Checkout Page Styles
    ======================== */
-/* Container & General Styling */
 .checkout-section {
-    height: 95vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -509,7 +507,6 @@ nav ul li a:hover {
     font-weight: 700;
 }
 
-/* Checkout steps*/
 .checkout-steps {
     display: flex;
     gap: 20px;
@@ -536,7 +533,6 @@ nav ul li a:hover {
     color: var(--black-color);
 }
 
-/* Password toggle */
 .password-wrapper {
     position: relative;
 }
@@ -556,7 +552,6 @@ nav ul li a:hover {
     color: #00aaff;
 }
 
-/* Box + Tabs */
 .checkout-box {
     background-color: #141e2d;
     padding: 3rem 2rem;
@@ -587,7 +582,6 @@ nav ul li a:hover {
     color: #09f;
 }
   
-/* Tab Number Styling */
 .tab-icon {
     display: inline-block;
     width: 1.2rem;
@@ -606,7 +600,6 @@ nav ul li a:hover {
     border: 2px solid var(--blue-button);
 }
   
-/* Forms */
 .checkout-form {
     display: none;
     flex-direction: column;
@@ -617,7 +610,6 @@ nav ul li a:hover {
     display: flex;
 }
   
-/* Input Fields */
 .checkout-form input[type="email"],
 .checkout-form input[type="password"],
 .checkout-form input[type="text"] {
@@ -627,10 +619,9 @@ nav ul li a:hover {
     border-radius: 12px;
     background-color: var(--banner);
     font-size: 1rem;
-    color: white;
+    color: var(--white-color);
 }
   
-/* Remember checkbox */
 .remember-box {
     display: flex;
     align-items: center;
@@ -702,7 +693,6 @@ nav ul li a:hover {
 
 /* contact us page */
 .contact-us {
-    background-color: #0d0f1a;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -736,7 +726,7 @@ nav ul li a:hover {
     padding: 3rem 2.4rem;
     border-radius: 1rem;
     width: 384px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px var(--banner);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -768,6 +758,7 @@ nav ul li a:hover {
 }
 
 .contact-card p {
+    text-align: center;
     font-size: 1rem;
     margin-top: 0.7rem;
     margin-bottom: 1rem;
@@ -808,7 +799,6 @@ nav ul li a:hover {
    ======================= */
 
 footer {
-    margin-top: 1rem;
     background: rgb(10, 15, 30, 0.4);
 }
 
@@ -817,12 +807,13 @@ footer .container {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
 footer .container img {
     height: 40px;
+    width: auto;
     margin-left: 1rem;
 }
 

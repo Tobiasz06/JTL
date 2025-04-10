@@ -53,9 +53,15 @@ document.getElementById("login-btn")?.addEventListener("click", async () => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
 
-    // Redirect to checkout.html after login
-    window.location.href = "checkout.html";
+    // Check which page we're on to decide redirect
+    const currentPage = window.location.pathname;
+    if (currentPage.includes("login.html")) {
+      window.location.href = "account.html"; // if on login page, go to account
+    } else {
+      window.location.href = "checkout.html"; // otherwise (buy page), continue checkout
+    }
   } catch (error) {
     alert(`Login error: ${error.message}`);
   }
 });
+
