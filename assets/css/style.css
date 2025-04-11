@@ -5,6 +5,7 @@
     --blue-button: rgb(61, 98, 207);
     --text-hover-blue: rgb(104, 140, 253);
     --roi-container-blue: rgb(10, 21, 35);
+    --sub-text-grey: rgb(208, 208, 208);
 
 }
 
@@ -87,12 +88,12 @@ p {
 
 .btn-secondary {
     background-color: transparent;
-    border: 3px solid #d0d0d0;
-    color: #d0d0d0;
+    border: 3px solid var(--sub-text-grey);
+    color: var(--sub-text-grey);
 }
 
 .btn-secondary:hover {
-    background-color: #d0d0d0;
+    background-color: var(--sub-text-grey);
     color: var(--black-color);
 }
 
@@ -168,14 +169,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--white-color);
+    color: var(--sub-text-grey);
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
 }
 
 nav ul li a:hover {
-    color: var(--text-hover-blue);
+    color: var(--white-color);
 }
 
 .login-button a {
@@ -236,7 +237,7 @@ nav ul li a:hover {
     margin-right: auto;
     font-size: 1.2rem;
     line-height: 1.3;
-    color: #d0d0d0;
+    color: var(--sub-text-grey);
     width: 40%;
 }
 
@@ -487,17 +488,18 @@ nav ul li a:hover {
   
 .faq h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 38px;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
   
 .faq-item {
     margin-bottom: 1rem;
     border-radius: 16px;
     overflow: hidden;
-    border: 2px solid var(--text-hover-blue);
-    background: rgb(16, 28, 48);
+    border: 2px solid var(--blue-button);
+    background: #1a1d2e;
 }
   
 .faq-question {
@@ -681,7 +683,7 @@ nav ul li a:hover {
     align-items: center;
     gap: 0.5rem;
     font-size: 1rem;
-    color: #ccc;
+    color: rgb(204, 204, 204);
     margin-bottom: 1rem;
 }
 
@@ -701,7 +703,7 @@ nav ul li a:hover {
 }
   
 .signup-text {
-    color: #999;
+    color: rgb(153, 153, 153);
     font-size: 1rem;
 }
   
@@ -781,7 +783,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #ffffff;
+    color: var(--white-color);
     transition: transform 0.3s ease;
 }
 
@@ -821,7 +823,7 @@ nav ul li a:hover {
 
 .bold-question {
     font-weight: 500;
-    color: #ffffff;
+    color: var(--white-color);
 }
 
 .contact-card .btn-primary {
