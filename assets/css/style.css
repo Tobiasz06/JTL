@@ -566,6 +566,7 @@ nav ul li a:hover {
 /* ========================
    Checkout Page Styles
    ======================== */
+
 .checkout-section {
     background: var(--roi-container-blue);
     min-height: 100vh;
@@ -880,6 +881,8 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    margin-bottom: 0rem;
 }
 
 .question-form h2 {
