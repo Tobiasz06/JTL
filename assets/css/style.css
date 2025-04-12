@@ -22,10 +22,12 @@ html, body {
     line-height: 1.1;
     overflow-x: hidden;
     overflow-y: auto;
+    background: var(--roi-container-blue);
     min-height: 100vh;
 }
 
-body {
+/* Homepage only — full screen sections */
+body.home-page {
     margin: 0;
     height: 100vh;
     overflow: hidden;
@@ -33,6 +35,16 @@ body {
     flex-direction: column;
     font-family: 'Inter', sans-serif;
     background: var(--roi-container-blue);
+}
+
+body:not(.home-page) {
+    background: var(--roi-container-blue);
+    overflow-y: auto;
+}
+
+body:not(.home-page) section {
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -542,12 +554,14 @@ nav ul li a:hover {
    Checkout Page Styles
    ======================== */
 .checkout-section {
-    padding-top: 6rem;
+    background: var(--roi-container-blue);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    padding-top: 6rem;
 }
+
 
 .checkout-container {
     text-align: center;
@@ -713,7 +727,6 @@ nav ul li a:hover {
     margin-left: 0.30rem;
 }
 
-/*Checkout page */
 .checkout-info {
     font-size: 17px;
 }
@@ -746,7 +759,7 @@ nav ul li a:hover {
 
 /* contact us page */
 .contact-us {
-    height: 100vh;
+    padding: 4rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -756,6 +769,7 @@ nav ul li a:hover {
 .contact-us h2 {
     font-size: 2rem;
     color: #1e90ff;
+    margin-top: rem;
     margin-bottom: 5rem;
     letter-spacing: 1px;
 }
@@ -794,10 +808,6 @@ nav ul li a:hover {
 
 .contact-card:not(.middle) {
     height: 350px;
-}
-
-.contact-card.middle {
-    height: 250px;
 }
 
 .contact-card h3 {
@@ -845,7 +855,6 @@ nav ul li a:hover {
     width: 32px;
     margin: 0 10px;
 }
-
 
 /* =======================
    Footer
