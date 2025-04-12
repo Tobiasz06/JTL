@@ -284,12 +284,76 @@ nav ul li a:hover {
 .rank-content {
     display: flex;
     align-items: center;
-    gap: 15rem;
+    gap: 3rem;
 }
 
 .rank-text .btn-primary, .btn-secondary{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+}
+
+.rank-image {
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    
+}
+.rank-image img {
+    height: 625px;
+}
+
+/* ========================
+   About section
+   ======================== */
+
+.about-content {
+     display: flex;
+     flex-direction: row;
+     height: calc(100vh - 200px);
+     align-items: center;
+     justify-content: center;
+     gap: 3rem;
+}
+   
+.about-image {
+     flex: 1;
+     height: 100%;
+}
+   
+.about-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 12px;
+     box-shadow: 0 0 25px rgba(30, 144, 255, 0.3); /* subtle glow */
+}
+   
+.about-text {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: left;
+     padding: 2rem;
+}
+   
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white-color);
+}
+   
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--sub-text-grey);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+   
+.about-text .hero-buttons {
+    display: flex;
+    gap: 1rem;
 }
 
 /* =======================
@@ -323,7 +387,7 @@ nav ul li a:hover {
     background: var(--roi-container-blue);
     border: 2px solid var(--blue-button); 
     border-radius: 15px;
-    padding: 9px;
+    padding: 16px;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -506,16 +570,16 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding: 6rem 10rem;
     background: linear-gradient(to right, rgb(13, 17, 24), rgb(10, 21, 35), rgb(13, 17, 24));
+    padding-top: 4rem;
+    padding-bottom: 6rem; /* gives enough room before footer */    
 }
   
 .faq h2 {
     text-align: center;
     font-size: 38px;
     font-weight: bold;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 3rem;
 }
   
@@ -1029,7 +1093,7 @@ footer .social-icons {
     margin: 0;
     display: flex;
     align-items: center;
-    height: 100%; /* optional, helpful for vertical centering */
+    height: 100%;
 }
 
 footer .social-icons a img {
