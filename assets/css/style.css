@@ -26,7 +26,7 @@ html, body {
     min-height: 100vh;
 }
 
-/* Homepage only — full screen sections */
+/* body styles for several pages */
 body.home-page {
     margin: 0;
     height: 100vh;
@@ -40,11 +40,29 @@ body.home-page {
 body:not(.home-page) {
     background: var(--roi-container-blue);
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body:not(.home-page) section {
     margin: 0;
     padding: 0;
+}
+
+body:not(.home-page) .contact-page {
+    padding-top: 140px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body:not(.home-page) footer {
+    position: relative;
+    transform: translateY(0);
+    margin-top: 2rem;
 }
 
 html {
@@ -113,7 +131,7 @@ p {
     color: var(--text-hover-blue);
 }
 
-/* for snap page*/
+/* for auto scroll index page*/
 .snap-wrapper {
     flex: 1;
     position: relative;
@@ -138,11 +156,6 @@ p {
     height: 100vh;
     flex-shrink: 0;
 } 
-
-.snap-section:last-child {
-    position: relative;
-    z-index: 1;
-}
 
 /* =======================
    Header & Navigation
@@ -758,6 +771,7 @@ nav ul li a:hover {
 }
 
 /* contact us page */
+/* contact boxes*/
 .contact-us {
     padding: 4rem 1rem;
     display: flex;
@@ -768,9 +782,8 @@ nav ul li a:hover {
 
 .contact-us h2 {
     font-size: 2rem;
-    color: #1e90ff;
-    margin-top: rem;
-    margin-bottom: 5rem;
+    color: var(--text-hover-blue);
+    margin-bottom: 3rem;
     letter-spacing: 1px;
 }
 
@@ -786,6 +799,7 @@ nav ul li a:hover {
     align-items: flex-start;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .contact-card {
@@ -846,7 +860,6 @@ nav ul li a:hover {
     margin-top: 2rem;
 }
 
-/* Social icons */
 .social-icons {
     margin-top: 2rem;
 }
@@ -855,6 +868,119 @@ nav ul li a:hover {
     width: 32px;
     margin: 0 10px;
 }
+
+/*question form*/
+.question-form {
+    padding: 2rem;
+    width: 100%;
+    max-width: 900px;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-form h2 {
+    font-size: 2rem;
+    color: var(--text-hover-blue);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.question-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.input-box {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-field {
+    flex: 1;
+    min-width: 260px;
+}
+
+.input-field input,
+.textarea-field textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--blue-button);
+    border-radius: 8px;
+    background-color: #1a1d2e;
+    color: var(--sub-text-grey);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.textarea-field textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+.question-form button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.9rem 2rem;
+    background-color: inherit;
+    color: var(--sub-text-grey);
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 7px var(--blue-button);
+}
+
+.question-form button:hover {
+    background-color: inherit;
+    color: var(--white-color);
+    box-shadow: 0 0 12px var(--blue-button);
+}
+
+.field .error-message {
+    font-size: 14px;
+    color: rgb(220, 20, 60, 0.7);
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: none;
+}
+
+.form .textarea-field .error-message {
+    margin-top: -1px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #101728;
+    color: var(--sub-text-grey);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--blue-button);
+    font-weight: bold;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .popup.show {
+    display: block;
+    opacity: 1;
+  }
 
 /* =======================
    Footer

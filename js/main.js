@@ -145,3 +145,69 @@ if (snapContainer) {
         }
     });
 }
+
+// For error handling in form and success popup
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".question-form form");
+  const fields = form.querySelectorAll(".field");
+  const successPopup = document.getElementById("successPopup");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let hasError = false;
+
+    fields.forEach((field) => {
+      const input = field.querySelector("input, textarea");
+      const error = field.querySelector(".error-message");
+
+      if (!input.value.trim()) {
+        error.style.display = "block";
+        hasError = true;
+      } else {
+        error.style.display = "none";
+      }
+    });
+
+    if (hasError) return;
+
+    // All valid, send using fetch to FormSubmit
+    const formData = new FormData(form);
+    fetch("https://formsubmit.co/ajax/TobiaszBremer01@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+      .then((res) => res.ok ? res.json() : Promise.reject(res))
+      .then(() => {
+        // Show popup instantly and fade after 2s
+        successPopup.style.display = "block";
+        setTimeout(() => {
+          successPopup.classList.add("show");
+
+          setTimeout(() => {
+            successPopup.classList.remove("show");
+
+            setTimeout(() => {
+              successPopup.style.display = "none";
+              form.reset();
+            }, 300); // match CSS transition
+          }, 2000);
+        }, 10); // tiny delay to allow CSS transition to trigger
+      })
+      .catch(() => {
+        alert("Something went wrong. Please try again later.");
+      });
+  });
+
+  // Live error hiding
+  fields.forEach((field) => {
+    const input = field.querySelector("input, textarea");
+    const error = field.querySelector(".error-message");
+
+    input.addEventListener("input", () => {
+      if (input.value.trim()) {
+        error.style.display = "none";
+      }
+    });
+  });
+});
