@@ -29,6 +29,7 @@ html, body {
 /* body styles for several pages */
 body.home-page {
     margin: 0;
+    padding: 0;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -307,38 +308,39 @@ nav ul li a:hover {
    ======================== */
 
 .about-content {
-     display: flex;
-     flex-direction: row;
-     height: calc(100vh - 200px);
-     align-items: center;
-     justify-content: center;
-     gap: 3rem;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 200px);
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
    
 .about-image {
-     flex: 1;
-     height: 100%;
+    flex: 1;
+    height: 100%;
 }
    
 .about-image img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 12px;
-     box-shadow: 0 0 25px rgba(30, 144, 255, 0.3); /* subtle glow */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.3); /* subtle glow */
 }
    
 .about-text {
-     flex: 1;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     text-align: left;
-     padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 2rem;
 }
    
 .about-text h2 {
     font-size: 2.5rem;
+    text-align: left;
     margin-bottom: 1.5rem;
     color: var(--white-color);
 }
@@ -352,8 +354,10 @@ nav ul li a:hover {
 }
    
 .about-text .hero-buttons {
+    margin-top: 0rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    justify-content: flex-start;
 }
 
 /* =======================
@@ -567,20 +571,35 @@ nav ul li a:hover {
    faq
    ======================= */
 .faq {
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, rgb(13, 17, 24), rgb(10, 21, 35), rgb(13, 17, 24));
-    padding-top: 4rem;
-    padding-bottom: 6rem; /* gives enough room before footer */    
+    background: linear-gradient(to right, rgb(13, 17, 24), rgb(10, 21, 35), rgb(13, 17, 24));  
 }
-  
+.faq2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq .container {
+    max-width: 1200px;
+}
+
 .faq h2 {
     text-align: center;
     font-size: 38px;
     font-weight: bold;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.faq2 h2 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
   
 .faq-item {
@@ -637,7 +656,6 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 6rem;
 }
 
 
@@ -650,7 +668,7 @@ nav ul li a:hover {
 .checkout-title {
     font-size: 2rem;
     color: #09f;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -762,7 +780,8 @@ nav ul li a:hover {
 .checkout-form input[type="password"],
 .checkout-form input[type="text"] {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.9rem;
+    margin-bottom: 0.1rem;
     border: none;
     border-radius: 11px;
     background-color: var(--banner);
@@ -776,6 +795,7 @@ nav ul li a:hover {
     gap: 0.5rem;
     font-size: 1rem;
     color: rgb(204, 204, 204);
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -846,7 +866,6 @@ nav ul li a:hover {
 }
 
 .contact-us h2 {
-    font-size: 2rem;
     color: var(--text-hover-blue);
     margin-bottom: 3rem;
     letter-spacing: 1px;
@@ -871,7 +890,7 @@ nav ul li a:hover {
     background-color: #1a1d2e;
     padding: 3rem 2.4rem;
     border-radius: 1rem;
-    width: 380px;
+    width: 400px;
     box-shadow: 0 0 15px var(--banner);
     display: flex;
     flex-direction: column;
@@ -881,17 +900,16 @@ nav ul li a:hover {
 }
 
 .contact-card:hover {
-    border: 3px solid var(--blue-button);
-    transform: scale(1.02);
+    border: 2px solid var(--blue-button);
 }
 
-.contact-card:not(.middle) {
-    height: 350px;
+.contact-card {
+    height: 325px;
 }
 
 .contact-card h3 {
     color: #1e90ff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
 }
 
@@ -902,16 +920,15 @@ nav ul li a:hover {
 .contact-card p {
     text-align: center;
     font-size: 1rem;
-    margin-top: 0.7rem;
-    margin-bottom: 1rem;
     color: #d1d5db;
-    max-width: 75%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .bold-question {
     font-weight: 500;
+    font-size: 1.1rem;
     color: var(--white-color);
 }
 
